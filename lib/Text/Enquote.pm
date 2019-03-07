@@ -55,11 +55,13 @@ sub convert_quotes {
 
     for ($text) {
 
-	## 0. Handle special case for "foo ..."
-	## This would be easier if we had perl 5.18 and we could use
-	## ?[[:punct:]-\N{U+2026}]
+        ## 0. Handle special case for "foo ..."
+        ## This would be easier if we had perl 5.18 and we could use
+        ## ?[[:punct:]-\N{U+2026}]
 
-	s/(\s+(?:(?<!\.)\.\.\.(?!\.)|\N{U+2026})) (["'])/$1 . $quotes{$2}->[1]/gex;
+        s/(\s+(?:(?<!\.)\.\.\.(?!\.)|\N{U+2026})) (["'])
+		 /$1 . $quotes{$2}->[1]
+		 /gex;
 
         ## 1. Convert all space quote combinations to open quotes
         s/($word_bounding) (["'])/$1 . $quotes{$2}->[0]/gex;

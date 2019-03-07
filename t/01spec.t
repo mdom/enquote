@@ -73,3 +73,4 @@ Lass doch dieses ewige "Ich will nicht!"! => Lass doch dieses ewige „Ich will 
 "quux…" => „quux…“
 <p>"foo …"</p> = <p>„foo …“</p>
 "quux …" => „quux …“
+Plötzlich Seit' an Seit' => Plötzlich Seit' an Seit'

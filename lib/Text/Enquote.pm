@@ -87,7 +87,7 @@ sub convert_quotes {
         ## 4. Search for converted closed quotes that are actually apostrophes
 
         ## 4.1. Closed without open quotes
-        s/^([^\N{U+201A}]+?)\N{U+2018}/$1'/g;
+        s/\G([^\N{U+201A}]+?)\N{U+2018}/$1'/g;
 
         ## 4.2. Closed without open quotes from the last closed
         s/(\N{U+2018}[^\N{U+201A}]+?)\N{U+2018}/$1'/g;
